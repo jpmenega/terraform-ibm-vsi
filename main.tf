@@ -8,8 +8,8 @@ resource "ibm_compute_vm_instance" "vm1" {
   network_speed        = 100
   hourly_billing       = true
   private_network_only = true
-  cores                = 1
-  memory               = 1024
-  disks                = [25]
+  flavor_key_name      = "C1.1x1X25"
+  //disks                = [25]
   local_disk           = false
+  tags                 = ["schematics"]
 }
